@@ -1,9 +1,17 @@
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .header {
     width: 100%;
     height: 211px;
 }
 
-.header-inner {
+.header_inner {
     margin: auto;
     text-align: center;
 }
@@ -26,7 +34,6 @@
     padding: 0 20px;
     line-height: 24px;
     color: rgb(161, 161, 161);
-    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
 }
 
@@ -40,7 +47,7 @@ li {
     display: inline-block;
 }
 
-.header-inner_line {
+.header_inner-line {
     margin: auto;
     width: 1418px;
     border-bottom: 1px solid #ecececd4;
@@ -49,11 +56,10 @@ li {
 .main {
     display: grid;
     grid-template-columns: auto 940px 450px auto;
-    grid-template-rows: repeat(2, 290px);
+    grid-template-rows: 290px 290px 200px;
     grid-gap: 10px 28px;
-    grid-template-areas: ". cave man . " ". cave space .";
+    grid-template-areas: ". cave man . " ". cave space ." ". . . .";
     color: white;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .main_picture-a {
@@ -69,15 +75,17 @@ li {
 }
 
 .article-a_header {
+    padding: 0 0 15px 0;
     font-size: 36px;
 }
 
-.article-inner_red_line {
+.article_inner-red-line {
     width: 92%;
-    border-bottom: 5px solid rgba(207, 39, 61, 0.51);
+    border-bottom: 10px solid rgba(236, 81, 101, 0.666);
 }
 
-.article-categroy {
+.article_categroy,
+.card_category {
     font-family: 'Open Sans', sans-serif;
     font-size: 12px;
 }
@@ -91,6 +99,13 @@ li {
     margin: 150px 0 0 50px;
     width: 291px;
     height: 58px;
+}
+
+.main_picture-a:hover,
+.main_picture-b:hover,
+.main_picture-c:hover {
+    transition: 1s;
+    box-shadow: 10px 5px 10px #dadadafd;
 }
 
 .article-b_header,
@@ -109,7 +124,81 @@ li {
     height: 58px;
 }
 
-.article-inner_line {
+.article_inner-line {
     width: 20px;
     border-bottom: 1px solid #ececec;
+}
+
+.cards {
+    display: grid;
+    padding: 0;
+    margin: 0;
+    grid-template-columns: auto 440px 440px 440px auto;
+    grid-template-rows: 80px 520px 200px;
+    grid-gap: 10px 40px;
+    grid-template-areas: ". title . . ." ". mountain bridge flower . " ". . . . .";
+    background-color: #ececec;
+}
+
+.card_title {
+    grid-area: title;
+    margin-top: -120px;
+    font-size: 36px;
+}
+
+.card_title-red-line {
+    width: 15%;
+    border-bottom: 10px solid rgba(236, 81, 101, 0.666);
+}
+
+.card-a {
+    grid-area: mountain;
+    position: relative;
+    padding: 0;
+    background-color: white;
+    border-bottom: 10px solid #dadadafd;
+}
+
+.card-b {
+    grid-area: bridge;
+    padding: 0;
+    background-color: white;
+    border-bottom: 10px solid #dadadafd;
+}
+
+.card-c {
+    grid-area: flower;
+    padding: 0;
+    background-color: white;
+    border-bottom: 10px solid #dadadafd;
+}
+
+.card-a:hover,
+.card-b:hover,
+.card-c:hover {
+    transition: 1s;
+    box-shadow: 10px 5px 10px #dadadafd;
+    border-bottom: 10px solid rgba(236, 81, 101, 0.666);
+}
+
+.card_article {
+    margin: 0;
+    padding: 0 30px;
+    width: 330px;
+}
+
+.card_header {
+    height: 58px;
+    font-size: 24px;
+}
+
+.card_description {
+    height: 80px;
+    color: #8f8f8ffd;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.card_category {
+    height: 20;
 }
